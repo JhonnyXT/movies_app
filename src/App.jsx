@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./App.Module.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { MoviesGrid } from "./components/MoviesGrid.jsx";
 import { MovieDetails } from "./pages/MovieDetails.jsx";
 import { LandingPage } from "./pages/LandingPage.jsx";
 
@@ -15,7 +14,7 @@ export default function App() {
       </header>
       <main>
         <Switch>
-          <Route path="/movies/:movieId"><MovieDetails/></Route>
+          <Route exact path="/movies/:movieId"><MovieDetails/></Route>
           <Route path="/"><LandingPage/></Route>
         </Switch>
       </main>
